@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <metaname="author" content="Les Tasker">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CC Geotechnical Home </title>
+        <script type="text/javascript" src="./js/main.js"></script>
+        
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            
+           
+            <div class="stickynav">                 
+                <ul class="topnav">
+                        <li><a href="about.html">About</a></li>  
+                        <li><a href="contact.html" class="current">Contact</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <!--<li><a href="projects.html">Projects</a></li>-->                        
+                        <li><a href="index.html">Home</a></li>
+                        <li class="left"><img src="./images/ccg1.png" alt="CCG Logo"></li>
+                </ul>                
+            </div>
+            <div id="contact">
+                    <p>     
+                        <h1>CC Geotechnical Ltd</h1>  <br>
+                            Units 1 & 2 Deltic Place <br>
+                            Deltic Way <br>
+                            Knowsley Industrial Estate <br> 
+                            Merseyside <br>
+                            L33 7BU <br><br>
+                            email: enquiries@ccgeotechnical.co.uk <br>
+                            Tel: 0151 545 2750 <br>
+                            Fax: 0151 548 7892 <br>
+                    </p>
+                    <a id="fullsizemap" target="_blank" href="https://www.google.co.uk/maps/place/CC+Geotechnical/@53.475627,-2.861348,16z/data=!4m5!3m4!1s0x0:0xc6b8b7b0dda91ed3!8m2!3d53.4761682!4d-2.8620373?hl=en">View Full Size Map</a>
+            </div>
+            <div id="googleMap"></div>
+
+<script>
+    
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(53.475638, -2.861350),
+    zoom:18,
+};
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+
+        var service = new google.maps.places.PlacesService(map);
+
+        service.getDetails({
+          placeId: 'ChIJvRDcM_AYe0gR0x6p3bC3uMY'
+        }, function(place, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+              
+            });
+            google.maps.event.addListener(marker, 'mouseover', function() {
+                var infowindow = new google.maps.InfoWindow({
+   });
+                infowindow.open(map, this);
+              infowindow.setContent('<div><strong>' + place.name + '</strong><br>'+ '<br>' +
+                place.formatted_address + '</div>');
+              
+            });
+          }
+        });
+}
+      
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8UeU4n4zZX8fnEvc7KzZdX6orqHuQ4Og&libraries=places&callback=myMap"></script>
+
+            
+        </header>
+        <footer>  
+        <div class="flogo">        
+            
+                <img class="ftag" src="./images/chas.jpg" alt="CHAS Logo">            
+                <img class="ftag" src="./images/isoq.jpg" alt="ISOQAR Logo">
+                <img class="ftag" src="./images/linkup.png" alt="Linkup Logo">            
+                <img class="ftag" src="./images/risqs.jpg" alt="RISQS Logo">
+                <img class="ftag" src="./images/bp.png" alt="BP Logo">
+                <img class="ftag" src="./images/cl.jpg" alt="CL Logo">
+                <img class="ftag" src="./images/agsban.jpg" alt="AGS Logo">
+                <img class="ftag" src="./images/bmta.jpg" alt="BMTA Logo">
+            </div>          
+            <p class="copy">Designed by Les Tasker @ <a id="eatfire" href="#">Eatfire Web Design</a> , Copyright &copy; 2018</p>
+        </footer>   
+    </body>
+</html>
