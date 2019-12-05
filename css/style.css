@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("reset.css") screen;
+@import url("animation.css") screen;
+
+body {
+  font: 15px/1.5 "Raleway", Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  background-image: url(../images/ccgbg.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.btn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+  float: right;
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+
+  border: 0;
+  transition: 0.2s linear;
+}
+.cont {
+  color: white;
+}
+
+#welcome {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+  padding-top: 20px;
+}
+a {
+  text-decoration: none;
+  color: #111;
+}
+#fullsizemap {
+  color: #047400;
+  font-weight: bolder;
+}
+
+.containerslide {
+  margin: 0 auto;
+  overflow: hidden;
+  width: auto;
+}
+
+/* CONTENT SLIDER */
+#content-slider {
+  width: 100%;
+  height: 360px;
+  margin: 10px auto 0;
+}
+/* SLIDER */
+#slider {
+  background: #000;
+  border: 5px solid #eaeaea;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  height: 320px;
+  width: 680px;
+  margin: 40px auto 0;
+  overflow: visible;
+  position: relative;
+}
+#mask {
+  overflow: hidden;
+  height: 320px;
+}
+#slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#slider li {
+  width: 680px;
+  height: 320px;
+  position: absolute;
+  top: -325px;
+  list-style: none;
+}
+
+#slider li.firstanimation {
+  -moz-animation: cycle 25s linear infinite;
+  -webkit-animation: cycle 25s linear infinite;
+}
+#slider li.secondanimation {
+  -moz-animation: cycletwo 25s linear infinite;
+  -webkit-animation: cycletwo 25s linear infinite;
+}
+#slider li.thirdanimation {
+  -moz-animation: cyclethree 25s linear infinite;
+  -webkit-animation: cyclethree 25s linear infinite;
+}
+#slider li.fourthanimation {
+  -moz-animation: cyclefour 25s linear infinite;
+  -webkit-animation: cyclefour 25s linear infinite;
+}
+#slider li.fifthanimation {
+  -moz-animation: cyclefive 25s linear infinite;
+  -webkit-animation: cyclefive 25s linear infinite;
+}
+
+#slider .tooltip {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 60px;
+  position: relative;
+  bottom: 75px;
+  left: -680px;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+#slider .tooltip h1 {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 60px;
+  padding: 0 0 0 20px;
+}
+
+#slider li#first:hover .tooltip,
+#slider li#second:hover .tooltip,
+#slider li#third:hover .tooltip,
+#slider li#fourth:hover .tooltip,
+#slider li#fifth:hover .tooltip {
+  left: 0px;
+}
+#slider:hover li,
+#slider:hover .progress-bar {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  position: relative;
+  top: -5px;
+  width: 680px;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  -moz-animation: fullexpand 25s ease-out infinite;
+  -webkit-animation: fullexpand 25s ease-out infinite;
+}
+
+#eatfire {
+  color: #000000;
+  text-decoration: underline;
+}
+.span {
+  color: #047400;
+  font-size: 16px;
+  font-weight: bold;
+}
+.span2 {
+  font-weight: bolder;
+}
+.paragraph {
+  margin: auto;
+  width: 90%;
+  font-size: 16px;
+  color: #000000;
+
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+}
+#mainparagraph {
+  color: #000000;
+  margin: 15px;
+}
+#team {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+#contact {
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+#googleMap {
+  width: 100%;
+  height: 550px;
+}
+.stickynav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: auto;
+
+  z-index: 1;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+ul.topnav li {
+  float: right;
+  padding-right: 10px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+ul.topnav li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+ul.topnav li a:hover:not(.current) {
+  background-color: #111;
+}
+
+ul.topnav li a.current {
+  background-color: #047400;
+}
+
+ul.topnav li.left {
+  float: left;
+  height: auto;
+  max-width: 100%;
+  padding: 6px 0 0 20px;
+  border: none;
+}
+.boxes {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.bio {
+  justify-content: center;
+  margin: 100px;
+}
+
+.service_box {
+  background: #fff;
+  box-shadow: #000;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+}
+
+#beetham {
+  width: 99%;
+  height: auto;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 5px; /* 5px rounded corners */
+  border: 5px solid #e2e2e2;
+}
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 0 0;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  text-align: center;
+}
+/* Add some padding inside the card container */
+
+.ftag {
+  height: 60px;
+  display: inline;
+  padding-top: 50px;
+}
+.flogo {
+  text-align: center;
+}
+.copy {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  text-align: center;
+
+  padding-top: 80px;
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* -----------------------------------------*/
+
+@media screen and (max-width: 715px) {
+  .containerslide {
+    display: none;
+  }
+  .ftag {
+    max-height: 40px;
+    display: block;
+  }
+
+  .paragraph {
+    margin: auto;
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #contact {
+    float: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    padding: 0;
+  }
+
+  ul.topnav li {
+    float: none;
+    width: 100%;
+  }
+  ul.topnav li.left {
+    display: none;
+  }
+  .stickynav {
+    position: relative;
+  }
+
+  .ftag {
+    height: 30px;
+    display: inline;
+    padding-top: 50px;
+  }
+  .flogo {
+    text-align: center;
+  }
+  .service_box {
+    background: #fff;
+    box-shadow: #000;
+    grid-template-columns: 2fr;
+  }
+  #beetham {
+    width: 99%;
+    height: auto;
+  }
+}
